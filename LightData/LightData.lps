@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="21">
+      <Unit0>
+        <Filename Value="LightData.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="36"/>
+        <UsageCount Value="101"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="formprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formPrincipal"/>
+        <CursorPos X="67" Y="55"/>
+        <UsageCount Value="101"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="formusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formUsuario"/>
+        <UsageCount Value="24"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="dmprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Dm1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="dmPrincipal"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="18"/>
+        <UsageCount Value="98"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="usuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Usuarios"/>
+        <UsageCount Value="24"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="formusuariosinserir.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmUsuariosInserir"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formUsuariosEdicao"/>
+        <UsageCount Value="24"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="formusuario.pas"/>
+        <ComponentName Value="frmUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formUsuario"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="14" Y="18"/>
+        <UsageCount Value="96"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="usuario.pas"/>
+        <UnitName Value="Usuario"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="13"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="formusuarioedicao.pas"/>
+        <ComponentName Value="frmUsuarioEdicao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formUsuarioEdicao"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="13"/>
+        <CursorPos X="17"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2537"/>
+        <CursorPos Y="2548"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\Componentes Lazarus\Zeos 7.2.4\src\dbc\ZDbcPostgreSqlUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="700"/>
+        <CursorPos Y="710"/>
+        <UsageCount Value="14"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\Componentes Lazarus\Zeos 7.2.4\src\component\ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2481"/>
+        <CursorPos Y="2491"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3509"/>
+        <CursorPos Y="3519"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\lcl\include\customedit.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="621"/>
+        <CursorPos Y="632"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8307"/>
+        <CursorPos Y="8318"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsstdctrls.pp"/>
+        <UnitName Value="Win32WSStdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1282"/>
+        <CursorPos Y="1297"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32proc.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1051"/>
+        <CursorPos Y="1068"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\components\lazutils\lazutf8.pas"/>
+        <UnitName Value="LazUTF8"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3637"/>
+        <CursorPos Y="3651"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="102"/>
+        <CursorPos Y="112"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2661"/>
+        <CursorPos X="20" Y="2673"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\zeosdbo-7.2.3-rc\src\dbc\ZDbcPostgreSqlUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="698"/>
+        <CursorPos Y="710"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="69" TopLine="65"/>
+      </Position1>
+      <Position2>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="70" TopLine="65"/>
+      </Position2>
+      <Position3>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="75" TopLine="65"/>
+      </Position3>
+      <Position4>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="85" TopLine="79"/>
+      </Position4>
+      <Position5>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="88" TopLine="79"/>
+      </Position5>
+      <Position6>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="89" TopLine="79"/>
+      </Position6>
+      <Position7>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="90" TopLine="79"/>
+      </Position7>
+      <Position8>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="91" TopLine="79"/>
+      </Position8>
+      <Position9>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="92" TopLine="79"/>
+      </Position9>
+      <Position10>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="93" TopLine="79"/>
+      </Position10>
+      <Position11>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="94" TopLine="79"/>
+      </Position11>
+      <Position12>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="95" TopLine="79"/>
+      </Position12>
+      <Position13>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="96" TopLine="79"/>
+      </Position13>
+      <Position14>
+        <Filename Value="usuario.pas"/>
+        <Caret Line="94" Column="66" TopLine="81"/>
+      </Position14>
+      <Position15>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="74" TopLine="66"/>
+      </Position15>
+      <Position16>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="76" Column="23" TopLine="69"/>
+      </Position16>
+      <Position17>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="71" Column="45" TopLine="60"/>
+      </Position17>
+      <Position18>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Line="74" Column="22" TopLine="64"/>
+      </Position18>
+      <Position19>
+        <Filename Value="formusuarioedicao.pas"/>
+        <Caret Column="17"/>
+      </Position19>
+      <Position20>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="10" Column="33" TopLine="78"/>
+      </Position20>
+      <Position21>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="71" Column="21" TopLine="58"/>
+      </Position21>
+      <Position22>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="70" Column="21" TopLine="57"/>
+      </Position22>
+      <Position23>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="72" Column="21" TopLine="59"/>
+      </Position23>
+      <Position24>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="73" Column="21" TopLine="60"/>
+      </Position24>
+      <Position25>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="79" TopLine="78"/>
+      </Position25>
+      <Position26>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="76" Column="5" TopLine="71"/>
+      </Position26>
+      <Position27>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="46" Column="22" TopLine="38"/>
+      </Position27>
+      <Position28>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="18" Column="14" TopLine="4"/>
+      </Position28>
+      <Position29>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="19" Column="14" TopLine="4"/>
+      </Position29>
+      <Position30>
+        <Filename Value="formusuario.pas"/>
+        <Caret Line="18" Column="14" TopLine="4"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

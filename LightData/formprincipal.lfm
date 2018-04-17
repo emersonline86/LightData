@@ -1,0 +1,50 @@
+object frmMain: TfrmMain
+  Left = 322
+  Height = 424
+  Top = 131
+  Width = 833
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'LightData'
+  ClientHeight = 404
+  ClientWidth = 833
+  Menu = MainMenu
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '1.8.2.0'
+  WindowState = wsMaximized
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 381
+    Width = 833
+    Panels = <>
+  end
+  object MainMenu: TMainMenu
+    left = 40
+    top = 64
+    object miSistema: TMenuItem
+      Caption = '&Sistema'
+      object miSair: TMenuItem
+        Caption = '&Sair'
+        OnClick = miSairClick
+      end
+    end
+    object miCadastro: TMenuItem
+      Caption = '&Cadastro'
+      object miUsuarios: TMenuItem
+        Caption = '&Usuários'
+        ShortCut = 16469
+        OnClick = miUsuariosClick
+      end
+      object miTabelasGerais: TMenuItem
+        Caption = '&Tabelas Gerais'
+        object miStatusReg: TMenuItem
+          Caption = '&Status de Registros'
+        end
+        object miEstadoCivil: TMenuItem
+          Caption = '&Estados Civis'
+        end
+      end
+    end
+  end
+end

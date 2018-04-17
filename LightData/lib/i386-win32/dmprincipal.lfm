@@ -1,0 +1,19 @@
+object Dm1: TDm1
+  OldCreateOrder = False
+  Height = 298
+  HorizontalOffset = 488
+  VerticalOffset = 181
+  Width = 579
+  PPI = 96
+  object conn: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Port = 0
+    Protocol = 'postgresql-9'
+    left = 24
+    top = 16
+  end
+end
