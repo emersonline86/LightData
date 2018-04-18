@@ -12,7 +12,7 @@ type
   { TUsuario }
   TUsuario = class
   private
-    FId: integer;
+    FId: integer ;
     FNome: string;
     FUsuario: string;
     FSenha: string;
@@ -29,10 +29,12 @@ type
     property IdUsuaRegistro: integer read FIdUsuaRegistro write FIdUsuaRegistro;
     property DataRegistro: TDateTime read FDataRegistro write FDataRegistro;
     property DataRegistroOffset: integer read FDataRegistroOffset write FDataRegistroOffset;
-    procedure InsertUsuario(user:TUsuario);
+    procedure InsertUsuario();
     function ChecarUsuario(usua: string): boolean;
     function ChecarEmailUsuario(emailNovo: string): boolean;
   end;
+
+  TMyException = class(Exception);
 
 implementation
 uses
@@ -40,26 +42,31 @@ uses
 
 { TUsuario }
 
-procedure TUsuario.InsertUsuario(user: TUsuario);
+procedure TUsuario.InsertUsuario();
 var
   SqlQuery: TZQuery;
 begin
   SqlQuery := TZQuery.Create(nil);
-  try
-    { TODO 5 -oEmerson -cPadronização de queries : Reformular query para utilização de parâmetros ao invés e concatenar os valores diretamente no texto da query. }
-    SqlQuery.Active := false;
-    SqlQuery.Connection := Dm1.conn;
-    SqlQuery.Sql.Text := '';
-    SqlQuery.SQL.Add('INSERT INTO usuario (nome, usuario, senha, email, usuario_registro_id) VALUES (');
-    SqlQuery.SQL.Add('''' + user.Nome + ''',');
-    SqlQuery.SQL.Add('''' + user.Usuario + ''',');
-    SqlQuery.SQL.Add('''' + user.Senha + ''',');
-    SqlQuery.SQL.Add('''' + user.Email + ''',');
-    SqlQuery.SQL.Add('''' + IntToStr(user.IdUsuaRegistro) + ''')');
-    SqlQuery.Active := true;
-  finally
-    SqlQuery.Free;
-  end;
+  if (Id = -1) then
+  begin
+    try
+      { TODO 5 -oEmerson -cPadronização de queries : Reformular query para utilização de parâmetros ao invés e concatenar os valores diretamente no texto da query. }
+      SqlQuery.Active := false;
+      SqlQuery.Connection := Dm1.conn;
+      SqlQuery.Sql.Text := '';
+      SqlQuery.SQL.Add('INSERT INTO usuario (nome, usuario, senha, email, usuario_registro_id) VALUES (');
+      SqlQuery.SQL.Add('''' + Nome + ''',');
+      SqlQuery.SQL.Add('''' + Usuario + ''',');
+      SqlQuery.SQL.Add('''' + Senha + ''',');
+      SqlQuery.SQL.Add('''' + Email + ''',');
+      SqlQuery.SQL.Add('''' + IntToStr(IdUsuaRegistro) + ''')');
+      SqlQuery.Active := true;
+    finally
+      SqlQuery.Free;
+    end;
+  end
+  else
+    Raise TMyException.Create('Objeto Usuario possui Id; Inserção no banco de dados abortada.');
 end;
 
 function TUsuario.ChecarUsuario(usua: string): boolean;

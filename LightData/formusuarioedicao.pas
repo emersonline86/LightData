@@ -38,6 +38,8 @@ type
 
   end;
 
+  TMyException = class(Exception);
+
 var
   frmUsuarioEdicao: TfrmUsuarioEdicao;
 
@@ -53,12 +55,13 @@ var
 begin
   try
     NovoUsuario := TUsuario.Create;
+    NovoUsuario.Id := -1;
     NovoUsuario.Nome := edtNome.Text;
     NovoUsuario.Usuario := edtUsuario.Text;
     NovoUsuario.Senha := edtSenha.Text;
     NovoUsuario.Email := edtEmail.Text;
     NovoUsuario.IdUsuaRegistro := 1;
-    NovoUsuario.InsertUsuario(NovoUsuario);
+    NovoUsuario.InsertUsuario;
     ShowMessage('Usuario inserido com sucesso!');
   finally
     NovoUsuario.Free;
@@ -81,7 +84,7 @@ procedure TfrmUsuarioEdicao.edtEmailExit(Sender: TObject);
 begin
   if (edtEmail.Text <> '') and (TempUsua.ChecarEmailUsuario(edtEmail.Text)) then
   begin
-    ShowMessage('Esse email já existe para outro usuário. Por favor utilize um email diferente.');
+    ShowMessage('Email já existe em outro usuário. Por favor utilize um email diferente.');
     edtEmail.SetFocus;
   end;
 end;
