@@ -84,6 +84,7 @@ var
 begin
   try
     novoUsuario := TfrmUsuarioEdicao.Create(nil);
+    novoUsuario.estadoEdicao := Incluir;
     novoUsuario.ShowModal;
   finally
     novoUsuario.Free;

@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, DBGrids,
   Buttons, DbCtrls, DBExtCtrls, StdCtrls, ComCtrls, ActnList, ZDataset, db,
-  formUsuarioEdicao, dmPrincipal;
+  formUsuarioEdicao, dmPrincipal, Usuario;
 
 type
 
@@ -84,6 +84,8 @@ var
 begin
   try
     novoUsuario := TfrmUsuarioEdicao.Create(nil);
+    novoUsuario.modoEdicao := Incluir;
+    novoUsuario.tempUsua := TUsuario.Create;
     novoUsuario.ShowModal;
   finally
     novoUsuario.Free;

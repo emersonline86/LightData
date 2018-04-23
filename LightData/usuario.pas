@@ -30,6 +30,7 @@ type
     property DataRegistro: TDateTime read FDataRegistro write FDataRegistro;
     property DataRegistroOffset: integer read FDataRegistroOffset write FDataRegistroOffset;
     procedure InsertUsuario();
+    procedure UpdateUsuario();
     function ChecarUsuario(usua: string): boolean;
     function ChecarEmailUsuario(emailNovo: string): boolean;
   end;
@@ -67,6 +68,11 @@ begin
   end
   else
     Raise TMyException.Create('Objeto Usuario possui Id; Inserção no banco de dados abortada.');
+end;
+
+procedure TUsuario.UpdateUsuario();
+begin
+
 end;
 
 function TUsuario.ChecarUsuario(usua: string): boolean;

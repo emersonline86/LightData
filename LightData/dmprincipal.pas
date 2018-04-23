@@ -18,6 +18,8 @@ type
   public
 
   end;
+  //Enumarator usado para definir o estado das telas de edição
+  TModoEdicao = (Incluir, Editar, Visualizar);
 
 var
   Dm1: TDm1;

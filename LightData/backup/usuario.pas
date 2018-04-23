@@ -67,8 +67,6 @@ begin
   end
   else
     Raise TMyException.Create('Objeto Usuario possui Id; Inserção no banco de dados abortada.');
-  end;
-
 end;
 
 function TUsuario.ChecarUsuario(usua: string): boolean;

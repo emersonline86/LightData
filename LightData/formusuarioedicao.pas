@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Buttons, Usuario;
+  Buttons, Usuario, dmPrincipal;
 
 type
 
@@ -31,11 +31,11 @@ type
     procedure edtConfirmarSenhaExit(Sender: TObject);
     procedure edtEmailExit(Sender: TObject);
     procedure edtUsuarioExit(Sender: TObject);
-    procedure FormShow(Sender: TObject);
   private
-    tempUsua: TUsuario;
-  public
 
+  public
+    modoEdicao: TModoEdicao;
+    tempUsua: TUsuario;
   end;
 
   TMyException = class(Exception);
@@ -54,15 +54,18 @@ var
   NovoUsuario: TUsuario;
 begin
   try
-    NovoUsuario := TUsuario.Create;
-    NovoUsuario.Id := -1;
-    NovoUsuario.Nome := edtNome.Text;
-    NovoUsuario.Usuario := edtUsuario.Text;
-    NovoUsuario.Senha := edtSenha.Text;
-    NovoUsuario.Email := edtEmail.Text;
-    NovoUsuario.IdUsuaRegistro := 1;
-    NovoUsuario.InsertUsuario;
-    ShowMessage('Usuario inserido com sucesso!');
+    if modoEdicao = Incluir then
+    begin
+      NovoUsuario := TUsuario.Create;
+      NovoUsuario.Id := -1;
+      NovoUsuario.Nome := edtNome.Text;
+      NovoUsuario.Usuario := edtUsuario.Text;
+      NovoUsuario.Senha := edtSenha.Text;
+      NovoUsuario.Email := edtEmail.Text;
+      NovoUsuario.IdUsuaRegistro := 1;
+      NovoUsuario.InsertUsuario;
+      ShowMessage('Usuario inserido com sucesso!');
+    end;
   finally
     NovoUsuario.Free;
     ModalResult := mrOk;
@@ -96,11 +99,6 @@ begin
     ShowMessage('Usuário já existente. Por favor escolha outro.');
     edtUsuario.SetFocus;
   end;
-end;
-
-procedure TfrmUsuarioEdicao.FormShow(Sender: TObject);
-begin
-  TempUsua := TUsuario.Create;
 end;
 
 procedure TfrmUsuarioEdicao.bBtnCancelarClick(Sender: TObject);

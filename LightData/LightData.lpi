@@ -17,10 +17,10 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="3"/>
+      <BuildNr Value="4"/>
       <Language Value="0416"/>
       <Attributes pvaDebug="True"/>
-      <StringTable CompanyName="LightHouse Sistemas" OriginalFilename="LightData" ProductVersion="0.1.0.0"/>
+      <StringTable CompanyName="LightHouse Sistemas" OriginalFilename="LightData" ProductName="Light Data" ProductVersion="0.1.0.0"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>

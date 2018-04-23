@@ -17,7 +17,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TDm1, Dm1);
-  Application.CreateForm(TfrmUsuarioEdicao, frmUsuarioEdicao);
   Application.Run;
 end.
 

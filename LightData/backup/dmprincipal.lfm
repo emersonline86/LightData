@@ -12,7 +12,6 @@ object Dm1: TDm1
       'AutoEncodeStrings='
     )
     Port = 0
-    Database = 'lightdata'
     Protocol = 'postgresql-9'
     left = 24
     top = 16

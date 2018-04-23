@@ -8,7 +8,6 @@ object frmUsuarioEdicao: TfrmUsuarioEdicao
   Caption = 'LightData - Criar Novo Usuário'
   ClientHeight = 236
   ClientWidth = 416
-  OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '1.8.2.0'
   object gpDadosUsuario: TGroupBox

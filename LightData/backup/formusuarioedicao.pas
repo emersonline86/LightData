@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Buttons, Usuario;
+  Buttons, Usuario, dmPrincipal;
 
 type
 
@@ -33,9 +33,10 @@ type
     procedure edtUsuarioExit(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
-    tempUsua: TUsuario;
-  public
 
+  public
+    modoEdicao: TModoEdicao;
+    tempUsua: TUsuario;
   end;
 
   TMyException = class(Exception);
@@ -54,16 +55,18 @@ var
   NovoUsuario: TUsuario;
 begin
   try
-    NovoUsuario := TUsuario.Create;
-    NovoUsuario.Id := 9;
-    NovoUsuario.Nome := edtNome.Text;
-    NovoUsuario.Usuario := edtUsuario.Text;
-    NovoUsuario.Senha := edtSenha.Text;
-    NovoUsuario.Email := edtEmail.Text;
-    NovoUsuario.IdUsuaRegistro := 1;
-    ShowMessage(IntToStr(NovoUsuario.Id));
-    NovoUsuario.InsertUsuario;
-    ShowMessage('Usuario inserido com sucesso!');
+    if modoEdicao = Incluir then
+    begin
+      NovoUsuario := TUsuario.Create;
+      NovoUsuario.Id := -1;
+      NovoUsuario.Nome := edtNome.Text;
+      NovoUsuario.Usuario := edtUsuario.Text;
+      NovoUsuario.Senha := edtSenha.Text;
+      NovoUsuario.Email := edtEmail.Text;
+      NovoUsuario.IdUsuaRegistro := 1;
+      NovoUsuario.InsertUsuario;
+      ShowMessage('Usuario inserido com sucesso!');
+    end;
   finally
     NovoUsuario.Free;
     ModalResult := mrOk;
@@ -85,7 +88,7 @@ procedure TfrmUsuarioEdicao.edtEmailExit(Sender: TObject);
 begin
   if (edtEmail.Text <> '') and (TempUsua.ChecarEmailUsuario(edtEmail.Text)) then
   begin
-    ShowMessage('Esse email já existe para outro usuário. Por favor utilize um email diferente.');
+    ShowMessage('Email já existe em outro usuário. Por favor utilize um email diferente.');
     edtEmail.SetFocus;
   end;
 end;
@@ -102,6 +105,9 @@ end;
 procedure TfrmUsuarioEdicao.FormShow(Sender: TObject);
 begin
   TempUsua := TUsuario.Create;
+  if modoEdicao = Alterar then
+  begin
+  end;
 end;
 
 procedure TfrmUsuarioEdicao.bBtnCancelarClick(Sender: TObject);
